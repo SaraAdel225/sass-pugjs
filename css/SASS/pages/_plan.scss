@@ -1,0 +1,91 @@
+@import "../helpers/mixinsVariableAnima";
+.plan{
+    .content{
+        @include content;
+        @media ($middleMedia) {
+            display: block;
+        }
+        .section{
+            border-radius: 0px;
+            .cont{
+                background-color: #22c55e;
+                color:white;
+                text-align: center;
+                padding: 20px;
+                border: 5px solid white;
+                outline: 5px solid #22c55e;
+                h2{
+                    font-size: 25px;
+                    margin: 0px 0px 10px 0px;
+                }
+                p{
+                    font-size: 40px;
+                    font-weight: bold;
+                    position: relative;
+                    width: fit-content;
+                    margin: auto;
+                    span{
+                        position: absolute;
+                        font-size: 25px;
+                        left: -19px;
+                        top: -5px;
+                    }
+                }
+                &.green{
+                    background-color: #22c55e;
+                    outline: 5px solid #22c55e;
+                }
+                &.blue{
+                    background-color: #0075ff;
+                    outline: 5px solid #0075ff;
+                }
+                &.yellow{
+                    background-color: #f59e0b;
+                    outline: 5px solid #f59e0b;
+                }
+            }
+            ul{
+                padding: 0px;
+                margin-top: 25px;
+                li{
+                    padding: 15px 0px;
+                    display: flex;
+                    border-bottom: 1px solid #eee ;
+                    span{
+                        margin-right: auto;
+                        font-weight: bold;
+                        letter-spacing: .7px;
+                    }
+                    .fa-check{
+                        color:#22c55e;
+                        font-size: 20px;
+                    }
+                    .fa-xmark{
+                        color:red;
+                        font-size: 20px;
+                    }
+                    .help{
+                        color:#888;
+                        cursor: pointer;
+                    }
+                }
+            }
+            a{
+                font-weight: bold;
+                letter-spacing: .7px;
+                &.green{
+                    @include button(#22c55e, white)
+                }
+                &.blue{
+                    @include button(#0075ff, white)
+                }
+            }
+            h4{
+                text-align: center;
+                color:#888;
+                margin: 0px;
+                font-weight: bold;
+            }
+        }
+    }
+}

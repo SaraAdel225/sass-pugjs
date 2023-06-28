@@ -1,0 +1,119 @@
+@import "../helpers/mixinsVariableAnima";
+.files{
+    .content{
+        @include content;
+        grid-template-columns: calc(100% - 250px) 250px;
+        gap: 0px;
+        @media ($middleMedia) {
+            display: block;
+        }
+        & > div{
+            padding: 0px 20px;
+        }
+        .section1{
+            background-color:transparent;
+            display: grid;
+            grid-template-columns: repeat(auto-fill , minmax(200px, 1fr));
+            flex-direction: row-reverse;
+            gap: 20px;
+            .cont{
+                background-color: white;
+                padding: 10px;
+                border-radius: 10px;
+                position: relative;
+                i{
+                    position: absolute;
+                    color:#888;
+                }
+                img{
+                    display: block;
+                    margin: auto;
+                    margin-top: 25px;
+                    transition: .3s;
+                }
+                h5{
+                    text-align: center;
+                    margin-top: 15px;
+                    font-size: 15px;
+                    font-weight: 100;
+                }
+                P{
+                    color:#888;
+                    font-size: 13px;
+                    margin: 0px;
+                }
+                .footer{
+                    @extend %fixed;
+                    border-top: 1px solid #eee;
+                    margin-top: 10px;
+                    padding-top: 10px
+                }
+                &:hover img{
+                    transform: rotate(10deg);
+                }
+            }
+        }
+        .section2{
+            height: fit-content;
+            padding-bottom: 20px;
+            .cont{
+                display: flex;
+                align-items: center;
+                border: 1px solid #eeeeee;
+                margin-bottom: 10px;
+                padding: 10px;
+                i{
+                    width: 40px;
+                    height: 40px;
+                    background-color: rgb(0 117 255 / 20%);
+                    color:#0075ff;
+                    @extend %center;
+                    &.fa-images{
+                        background-color: #22c55e33;
+                        color:#22c55e;
+                    }
+                    &.fa-file-word{
+                        background-color: #ff000033;
+                        color:#ff0000;
+                    }
+                    &.fa-file-csv{
+                        background-color: #f59e0b33;
+                        color:#f59e0b;
+                    }
+                }
+                .word{
+                    margin-left: 10px;
+                    h5{
+                        margin: 0px;
+                        margin-bottom: 10px;
+                        font-weight: 100;
+                    }
+                    p{
+                        margin: 0px;
+                        font-size: 13px;
+                        color:#888
+                    }
+                }
+                p{
+                    margin-left: auto;
+                    font-size: 14px;
+                    color:#888;
+                }
+            }
+            a{
+                @include button(#0075ff, white);
+                padding: 15px;
+                display: block;
+                width:fit-content;
+                margin: auto;
+                margin-top: 20px;
+                i{
+                    margin-right: 10px;
+                }
+                &:hover i{
+                    animation: top 1s infinite linear ;
+                }
+            }
+        }
+    }
+}

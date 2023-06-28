@@ -1,0 +1,140 @@
+-var name  = "setting"
+include include.pug
+
+doctype
+html(lang="en")
+    +head
+    body
+        .scroll
+        .page
+            +list
+            div(class= name)
+                // Start Header
+                +header
+                //end Header
+                |
+                |
+                .fill
+                    h1(data-text= name)= name
+                .content
+                    .section1
+                        h2 Site Control
+                        h4 Control The Website If There Is Maintenance
+                        .cont 
+                            .sect  
+                                h3 WebSite Control
+                                h4 Open/Close Website And Type The Reason 
+                            label
+                                input(class="toggle-checkbox" , type = "checkbox")
+                                .toggle-switch 
+                        textarea(placeholder = "close Message Content") 
+                    .section2
+                        h2 General Info
+                        h4 General Information About Your Account 
+                        .cont
+                            form(action = "")
+                                label(for = "fname") First Name 
+                                input(type = "text" id = "fname" placeholder = "First Name")  
+                                label(for = "lname") Last Name 
+                                input(type = "text" id = "lname" placeholder = "Last Name")  
+                                label(for = "email") Email
+                                input(type = "text" id = "email" placeholder = "saraadel225@gmail.com" disabled) 
+                                a Change
+                    .section3
+                        h2 Security info 
+                        h4 Security Information About Your Account
+                        .cont
+                            .sect 
+                                h3 Password
+                                h4 last Change On 25/10/2021
+                            a(href="") Change
+                        .cont
+                            .sect 
+                                h3 Two-Factor Authentication
+                                h4 Enable/Disable The Feature
+                            label
+                                input(class="toggle-checkbox" , type = "checkbox")
+                                .toggle-switch 
+                        .cont
+                            .sect 
+                                h3 Devices
+                                h4 check The Login Devices List
+                            a(href="" class = "devices")  Devices
+                    .section4
+                        h2 Social Info
+                        h4 Social Media Information
+                        .cont
+                            input(type = "text"  placeholder = "Twitter Username")
+                            i(class="fa-brands fa-twitter")
+                        .cont
+                            input(type = "text"  placeholder = "Facebook Username")
+                            i(class="fa-brands fa-facebook-f")
+                        .cont
+                            input(type = "text"  placeholder = "Linkedin  Username")
+                            i(class="fa-brands fa-linkedin-in")
+                        .cont
+                            input(type = "text"  placeholder = "Youtube Username")
+                            i(class = "fa-brands fa-youtube")
+                    .section5
+                        h2 Widgets Control
+                        h4 Show/Hide Widgets
+                        .cont
+                            label(for="Checkbox1") Quick Draft 
+                                input(type="checkbox" id="Checkbox1")
+                                .checked
+                            br
+                            label(for="Checkbox2") Targets
+                                input(type="checkbox" id="Checkbox2")
+                                .checked
+                            br
+                            label(for="Checkbox3") Tickets Statistics 
+                                input(type="checkbox" id="Checkbox3")
+                                .checked
+                            br
+                            label(for="Checkbox4") Latest Tasks 
+                                input(type="checkbox" id="Checkbox4")
+                                .checked
+                            br
+                            label(for="Checkbox5") Latest News 
+                                input(type="checkbox" id="Checkbox5")
+                                .checked
+                            br
+                            label(for="Checkbox6") Top Search Items 
+                                input(type="checkbox" id="Checkbox6")
+                                .checked
+                            br
+                    .section6
+                        h2 Backup Manager
+                        h4 Control Backup Time And Location
+                        .cont
+                            input(type="radio" id="radio1" name ="radio")
+                            label(for="radio1") Quick Draft 
+                            br
+                            br
+                            input(type="radio" id="radio2" name ="radio")
+                            label(for="radio2") Weekly
+                            br
+                            br
+                            input(type="radio" id="radio3" name ="radio")
+                            label(for="radio3") Monthly
+                            br
+                            br
+                        .server
+                            input(type="radio" id="server-one" name ="server")
+                            .contServer
+                                label(for="server-one")
+                                    i(class = "fa-solid fa-server")
+                                    | Megaman
+                            input(type="radio" id="server-two" name ="server")
+                            .contServer
+                                label(for="server-two")
+                                    i(class = "fa-solid fa-server")
+                                    | Zero
+                            input(type="radio" id="server-three" name ="server")
+                            .contServer
+                                label(for="server-three")
+                                    i(class = "fa-solid fa-server")
+                                    | Sigma
+        |          
+        |
+        <script src="../main.js"></script>

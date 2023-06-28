@@ -1,0 +1,37 @@
+-var name  = "project"
+include include.pug
+
+doctype
+html(lang="en")
+    +head
+    body
+        .scroll
+        .page
+            +list
+            div(class= name)
+                // Start Header
+                +header
+                //end Header
+                |
+                |
+                .fill
+                    h1(data-text= name)= name
+                .content
+                    +contentProject("Elzero Dashboard", "15/10/2021","Elzero Dashboard Project Design And Programming And Hosting",5, 4,"red","2500", ["programming","Design","Hosting","Marketing"] )
+                    +contentProject("Academy Portal", "15/6/2022","Academy Portal Project Design And Programming",3, 2,"green","1800", ["programming","Design"])
+                    +contentProject("Chatting Application", "15/6/2022","Chatting Application Project Design",3, 1,"blue","950", ["Design"])
+                    +contentProject("Ahmed Dashboard", "15/6/2022","Ahmed Dashboard Project Design And Programming And Hosting",4, 4,"green","1700", ["programming","Design","Hosting","Marketing"])
+                    +contentProject("Ahmed Portal", "15/6/2022","Ahmed Portal Project Design And Programming And Hosting",3, 2,"green","850", ["programming","Design"])
+                    +contentProject("Mohamed Application", "15/6/2022","Mohamed Application Project Design",3, 1,"red","950", ["Design"])
+                    +contentProject("Mohamed Dashboard", "15/6/2022","Mohamed Dashboard Project Design And Programming And Hosting",4, 4,"green","1950", ["programming","Design","Hosting","Marketing"])
+                    +contentProject("Mohamed Portal", "15/6/2022","Mohamed Portal Project Design And Programming",3, 2,"green","1650", ["programming","Design"])
+                    +contentProject("Ahmed Application", "15/6/2022","Ahmed Application Project Design",3, 1,"green","950", ["Design"])
+        |          
+        |
+        <script src="../main.js"></script>
+
+
+
+
+
+

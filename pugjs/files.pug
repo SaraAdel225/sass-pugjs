@@ -1,0 +1,85 @@
+-var name  = "files"
+include include.pug
+
+doctype
+html(lang="en")
+    +head
+    body
+        .scroll
+        .page
+            +list
+            div(class= name)
+                // Start Header
+                +header
+                //end Header
+                |
+                |
+                .fill
+                    h1(data-text= name)= name
+                .content
+                    .section1 
+                        +contentFiles(1,"Elzero","20/06/2020",5.5)
+                        +contentFiles(2,"Admin","16/05/2021",12.5)
+                        +contentFiles(3,"Uploader","19/06/2021",2.7)
+                        +contentFiles(4,"Sara","15/04/2021",5.5)
+                        +contentFiles(5,"Coder","23/05/2021",5.5)
+                        +contentFiles(6,"Designer","20/06/2020",5.5)
+                        +contentFiles(4,"Sara","15/04/2021",5.5)
+                        +contentFiles(5,"Coder","23/05/2021",5.5)
+                        +contentFiles(2,"Admin","16/05/2021",12.5)
+                        +contentFiles(3,"Uploader","19/06/2021",2.7)
+                        +contentFiles(1,"Elzero","20/06/2020",5.5)
+                        +contentFiles(2,"Admin","16/05/2021",12.5)
+                        +contentFiles(1,"Elzero","20/06/2020",5.5)
+                        +contentFiles(2,"Admin","16/05/2021",12.5)
+                        +contentFiles(3,"Uploader","19/06/2021",2.7)
+                        +contentFiles(4,"Sara","15/04/2021",5.5)
+                        +contentFiles(5,"Coder","23/05/2021",5.5)
+                        +contentFiles(6,"Designer","20/06/2020",5.5)
+                        +contentFiles(4,"Sara","15/04/2021",5.5)
+                        +contentFiles(5,"Coder","23/05/2021",5.5)
+                        +contentFiles(2,"Admin","16/05/2021",12.5)
+                        +contentFiles(3,"Uploader","19/06/2021",2.7)
+                        +contentFiles(1,"Elzero","20/06/2020",5.5)
+                        +contentFiles(2,"Admin","16/05/2021",12.5)
+                        +contentFiles(1,"Elzero","20/06/2020",5.5)
+                        +contentFiles(2,"Admin","16/05/2021",12.5)
+                        +contentFiles(1,"Elzero","20/06/2020",5.5)
+                        +contentFiles(2,"Admin","16/05/2021",12.5)
+                        +contentFiles(3,"Uploader","19/06/2021",2.7)
+                        +contentFiles(4,"Sara","15/04/2021",5.5)
+                        +contentFiles(5,"Coder","23/05/2021",5.5)
+                        +contentFiles(6,"Designer","20/06/2020",5.5)
+                        +contentFiles(2,"Admin","16/05/2021",12.5)
+                    .section2
+                        h2 File Statistics
+                        .cont
+                            i(class="fa-regular fa-file-pdf")
+                            .word 
+                                h5 PDF Files
+                                p 130
+                            p 6.5GB
+                        .cont
+                            i(class="fa-regular fa-images")
+                            .word 
+                                h5 Images
+                                p 115 Files
+                            p 3.5GB
+                        .cont
+                            i(class="fa-regular fa-file-word")
+                            .word 
+                                h5 Word Files
+                                p 110 Files
+                            p 3.2GB
+                        .cont
+                            i(class="fa-solid fa-file-csv")
+                            .word 
+                                h5 CSV
+                                p 99 Files
+                            p 2.9GB
+                        a(href="") 
+                            i(Class = "fa-solid fa-angles-up")
+                            | UPload 
+            |          
+            |
+            <script src="../main.js"></script>

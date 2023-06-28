@@ -1,0 +1,68 @@
+$middleMedia : "max-width: 992px";
+$mobilMedia : "max-width:  600px";
+
+@mixin content{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        gap:20px;
+        margin:20px ;
+        @media ($middleMedia) {
+            display: block;
+        }
+        &>div{
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            @media ($middleMedia ) {
+                margin-bottom: 20px;
+            }
+        }
+}
+@mixin circle ($size , $color) {
+    width: $size;
+    height: $size;
+    background-color: $color;
+    border-radius: 50%;
+}
+@mixin after ($width, $height, $top, $left, $color){
+    content: "";
+    position: absolute;
+    width: $width;
+    height: $height;
+    top: $top;
+    left: $left;
+    background-color: $color;
+}
+%fixed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+%center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin button($bgColor , $color){
+    background-color: $bgColor;
+    color: $color;
+    font-size: 15px;
+    padding: 6px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+@mixin icon($iconName, $bgColor , $color){
+    font-family: "Font Awesome 6 Free";
+    content: $iconName;
+    font-weight: bold;
+    background-color: $bgColor ;
+    color: $color
+}
+@keyframes changeColor {
+    0% ,100%{
+        background-color: #0075ff;
+    }
+    50%{
+        background-color: white;
+    }
+}

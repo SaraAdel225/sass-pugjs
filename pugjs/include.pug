@@ -1,0 +1,205 @@
+//- start mixin head
+mixin head 
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        // link Styles File
+        link(rel="stylesheet" href="../css/website.css")
+        link(rel="stylesheet" href="../css/normalize.css")
+        link(rel="stylesheet" href="../css/all.min.css")
+        //  google font
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&amp;display=swap" rel="stylesheet")
+        link(rel="icon" href="../image/man.png")
+        title #{name}
+//- end mixin head
+
+//- start mixin UL li in list
+mixin listLi (classI, spanC , link)
+    li(class= name === spanC ? "active" : spanC)
+        a(href= link)
+            i(class = classI)
+            span= spanC
+
+//- end mixin UL li in list
+
+//- start mixin list
+mixin list
+    .list
+        h3 Sara Adel
+        ul
+            +listLi('fa-solid fa-chart-bar', 'dashboard' , "../index.html")
+            +listLi('fa-solid fa-gear', 'setting', "setting.html")
+            +listLi('fa-solid fa-user', 'profile', "profile.html")
+            +listLi('fa-solid fa-diagram-project', 'project', "project.html")
+            +listLi('fa-solid fa-graduation-cap', 'courses', "courses.html")
+            +listLi('fa-regular fa-circle-user', 'friends', "friends.html")
+            +listLi('fa-solid fa-file', 'files', "files.html")
+            +listLi('fa-solid fa-credit-card', 'plan', "plan.html")
+//- end mixin list
+
+//- start mixin header
+mixin header
+    .header
+        .search
+            i(class = "fa-solid fa-magnifying-glass")
+            input(type = "text" placeholder = "Type A Keyword")
+        .img
+            i(class = "fa-regular fa-bell")
+            img(src = "../image/beauty.png")
+
+
+//- content Profile page
+//- content settingProfile page
+mixin contentProfile(contentH4,arrayContentP,arrayContentSpan)
+    .sect
+        h4= contentH4
+        .divFlex
+            - for(var j = 0 ; j < 3; j++)
+                p= `${arrayContentP[j]} :`
+                    span= arrayContentSpan[j]
+        <label>
+            <input class="toggle-checkbox" type="checkbox">
+            <div class="toggle-switch"> </div>
+        </label>
+
+
+//- content Project page
+mixin contentProject(contentH2,date,contentH4,numberImg, numberSkills,color,price, array )
+    .section
+        .headCont 
+            h2= contentH2
+            p= date
+        h4= contentH4
+        .imgCont
+            |
+            |
+            - for(var x=0 ; x < numberImg; x++)
+                img(src=`../image/team-0${x+1}.png`, alt="")
+                |
+                |
+        .skills
+            |
+            |
+            each item in array
+                span(class="span")= item
+                |
+                |
+        .footCont
+            .scil(class= color)
+            h4= `$ ${price}`
+
+//- content Project page
+mixin contentCourses(numberImgTeam,numberImgCourse,title,cont, numberFollow,price)
+    .section
+        img(src=`../image/team-0${numberImgTeam}.png`, alt="" ,class="team")
+        |
+        |
+        img(src=`../image/course-0${numberImgCourse}.jpg`, alt="" , class= "course")
+        .words
+            h3= title
+            p= cont
+            span Course Info
+        .footCont
+            .follow 
+                <i class="fa-regular fa-user"></i>
+                h4= numberFollow
+            h4= `$ ${price}`
+
+//- content friends page
+mixin contentFriends(numberImg,nameFriends,skill,numberFriend, numberProject,numberArticles,date)
+    .section
+        .sect
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-regular fa-envelope"></i>
+        img(src=`../image/sara (${numberImg}).jfif`, alt="")
+        h3= nameFriends
+        h4= skill 
+        .number
+            .cont
+                <i class="fa-regular fa-face-smile"></i>
+                h6= `${numberFriend} Friend`
+            .cont
+                <i class="fa-solid fa-code-commit fa-fw"></i>
+                h6= `${numberProject} Project`
+            .cont
+                <i class="fa-regular fa-newspaper fa-fw"></i>
+                h6= `${numberArticles} Articles`
+        .footer
+            p= `joined ${date}`
+            .link
+                a(href="" class="profile")  profile
+                a(href="" class="remove") Remove 
+
+
+//- content Plan page
+mixin contentPlan(h4Cont,Price,color,numberCorrect,arraySpan,button, contButton)
+    .section
+        .cont(class= color)
+            h2= h4Cont
+            p=  Price
+                span $
+        ul
+            - for(var i=0; i< 9 ; i++)
+                li
+                    - if(numberCorrect > i)
+                        i(class = "fa-solid fa-check fa-fw yes")
+                    - else
+                        i(class = "fa-solid fa-xmark fa-fw")
+                    span= arraySpan[i]
+                    i(class="fa-solid fa-circle-info help")
+                |
+                |
+        - if(button == "No")
+            h4= contButton
+        - else
+            a(href="" class= color) Join
+
+//- content Files page
+mixin contentFiles(x,name,date,number)
+    .cont 
+        i(class = "fa-solid fa-download")
+        img(src=`../image/file${x}.png`, alt="")
+        case x
+            when 1
+                h5 my-file.pdf
+            when 2
+                h5 my-file.avi
+            when 3
+                h5 my-file.eps
+            when 4
+                h5 my-file.dll
+            when 1
+                h5 my-file.psd
+            default
+                h5 my-file.zip
+        p= name
+        .footer
+            p= date 
+            p= `${number} MB`
+
+
+
+//- -var name  = "sara"
+//- include include.pug
+
+//- doctype
+//- html(lang="en")
+//-     +head
+//-     body
+//-         .scroll
+//-         .page
+//-             +list
+//-             div(class= name)
+//-                 // Start Header
+//-                 +header
+//-                 //end Header
+//-                 |
+//-                 |
+//-                 <h1>#{name}</h1>
+//-                 .content
+//-                     .section1
+//-             |          
+//-             |
+//-              <script src="../main.js"></script>

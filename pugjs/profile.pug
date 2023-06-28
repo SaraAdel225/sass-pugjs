@@ -1,0 +1,106 @@
+-var name  = "profile"
+include include.pug
+
+doctype
+html(lang="en")
+    +head
+    body
+        .scroll
+        .page
+            +list
+            div(class= name)
+                // Start Header
+                +header
+                //end Header
+                |
+                |
+                .fill
+                    h1(data-text= name)= name
+                .content
+                    .section1
+                        .cont1
+                            img(src="../image/beauty.png", alt="")
+                            h3 Sara Adel
+                            h4 Level 20
+                            .scil
+                            - for(var i=0; i<5 ; i++)
+                                i(class= "fa-solid fa-star c-orange fs-13")
+                                |
+                                |
+                            h5 550 Rating
+                        .cont2
+                            +contentProfile("General Information",["Full Name","Gender","Country"],["Sara Adel","Female","Egypt"])
+                            +contentProfile("Personal Information",["Email","Phone","Date Of Birth"],["saraadel225@gmail","01020870630","1/8/2002"])
+                            +contentProfile("Job Information",["Title","Programming Language","Years Of Experience"],["Front End Developer","Python","2+"])
+                            +contentProfile("Billing Information",["Payment Method","Email","Subscription"],["Paypal","email@website.com","Monthly"])
+                    .section2
+                        h2 My Skills
+                        h4 Complete
+                        ul 
+                            li 
+                                span(class="span") HTML
+                                span(class="span") Pugjs
+                                span(class="span") HAML
+                            li 
+                                span(class="span") CSS
+                                span(class="span") SASS
+                                span(class="span") Stylus
+                            li 
+                                span(class="span") JavaScript
+                                span(class="span") TypeScript
+                            li 
+                                span(class="span") Vuejs
+                                span(class="span") Reactjs
+                            li 
+                                span(class="span") Jest
+                                span(class="span") Jestmine
+                            li 
+                                span(class="span") PHP
+                                span(class="span") Laravel
+                            li 
+                                span(class="span") Python
+                                span(class="span") Django
+                    .section3
+                        h2 LAtest Activities 
+                        h4 Latest Activities Done By The User
+                        .cont 
+                            .sect
+                                img(src="../image/activity-01.png", alt="")
+                                .word 
+                                    h3 Store 
+                                    h4 Bought The Mastering Python Course
+                            .date 
+                                h3 18:10 
+                                h4 Yesterday
+                        .cont 
+                            .sect
+                                img(src="../image/activity-02.png", alt="")
+                                .word 
+                                    h3 Academy
+                                    h4 Got The PHP Certificate
+                            .date 
+                                h3 16:05 
+                                h4 Yesterday
+                        .cont 
+                            .sect
+                                img(src="../image/activity-03.png", alt="")
+                                .word 
+                                    h3 Badges
+                                    h4 Unlock The 10 Skills Badge
+                            .date 
+                                h3 18:05 
+                                h4 Yesterday
+                        .cont 
+                            .sect
+                                img(src="../image/activity-01.png", alt="")
+                                .word 
+                                    h3 Store 
+                                    h4 Bought The Mastering Python Course
+                            .date 
+                                h3 18:10 
+                                h4 Yesterday
+
+
+            |
+            |
+            <script src="../main.js"></script>

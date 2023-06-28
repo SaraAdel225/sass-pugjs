@@ -1,0 +1,32 @@
+-var name  = "friends"
+include include.pug
+
+doctype
+html(lang="en")
+    +head
+    body
+        .scroll
+        .page
+            +list
+            div(class= name)
+                // Start Header
+                +header
+                //end Header
+                |
+                |
+                .fill
+                    h1(data-text= name)= name
+                .content
+                    +contentFriends(1,"Sara Adel","JavaScript Developer",99,15,25,"02/10/2021")
+                    +contentFriends(2,"Mariam Adel","Cloud Developer",30,11,12,"02/08/2020")
+                    +contentFriends(3,"Nada Medhet","Mobile Developer",80,20,10,"02/10/2020")
+                    +contentFriends(4,"Mana Nabil","Back-End Developer",70,30,18,"28/06/2020")
+                    +contentFriends(5,"Amira Mohamed","Algorithm Developer",80,30,18,"28/08/2020")
+                    +contentFriends(6,"Mana Nabil","Back-End Developer",70,30,18,"28/06/2020")
+                    +contentFriends(7,"Mariam Adel","Cloud Developer",30,11,12,"02/08/2020")
+                    +contentFriends(8,"Mariam Mohamed","Content Developer",80,30,18,"28/08/2020")
+                    +contentFriends(9,"Mariam Adel","Cloud Developer",30,11,12,"02/08/2020")
+                    +contentFriends(10,"Mariam Adel","Cloud Developer",30,11,12,"02/08/2020")
+            |          
+            |
+            <script src="../main.js"></script>

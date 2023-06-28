@@ -1,0 +1,69 @@
+@import "../helpers/mixinsVariableAnima";
+.courses{
+    .content{
+        @include content;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        @media ($middleMedia) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        .section{
+            padding: 0px;
+            position: relative;
+            .team{
+                width: 60px;
+                position: absolute;
+                top:20px;
+                left: 20px;
+                border-radius: 50%;
+            }
+            .course{
+                width: 100%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            .words{
+                padding: 0px 20px 20px 20px;
+                position: relative;
+                h3{
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 1.5;
+                    letter-spacing: .8px;
+                    color: #888;
+                    font-weight: bold;
+                }
+                span{
+                    @include button(#0075ff , white);
+                    letter-spacing: .8px;
+                    position: absolute;
+                    bottom: -15px;
+                    font-size: 13px;
+                    left: 50%;
+                    transform: translateX(-50%)
+                }
+            }
+            .footCont{
+                @extend %fixed;
+                padding: 15px 20px 0px 20px;
+                margin: 0px;
+                border-top: 1px solid #eee;
+                h4{
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+                .follow{
+                    display: flex;
+                    i{
+                        font-size: 13px;
+                        margin-right: 5px;
+                        color: #888;
+                    }
+                }
+            }
+        }
+    }
+}

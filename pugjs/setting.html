@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- link Styles File-->
+    <link rel="stylesheet" href="../css/website.css"/>
+    <link rel="stylesheet" href="../css/normalize.css"/>
+    <link rel="stylesheet" href="../css/all.min.css"/>
+    <!--  google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&amp;amp;display=swap" rel="stylesheet"/>
+    <link rel="icon" href="../image/man.png"/>
+    <title>setting</title>
+  </head>
+  <body>
+    <div class="scroll"></div>
+    <div class="page">
+      <div class="list">
+        <h3>Sara Adel</h3>
+        <ul>
+          <li class="dashboard"><a href="../index.html"><i class="fa-solid fa-chart-bar"></i><span>dashboard</span></a></li>
+          <li class="active"><a href="setting.html"><i class="fa-solid fa-gear"></i><span>setting</span></a></li>
+          <li class="profile"><a href="profile.html"><i class="fa-solid fa-user"></i><span>profile</span></a></li>
+          <li class="project"><a href="project.html"><i class="fa-solid fa-diagram-project"></i><span>project</span></a></li>
+          <li class="courses"><a href="courses.html"><i class="fa-solid fa-graduation-cap"></i><span>courses</span></a></li>
+          <li class="friends"><a href="friends.html"><i class="fa-regular fa-circle-user"></i><span>friends</span></a></li>
+          <li class="files"><a href="files.html"><i class="fa-solid fa-file"></i><span>files</span></a></li>
+          <li class="plan"><a href="plan.html"><i class="fa-solid fa-credit-card"></i><span>plan</span></a></li>
+        </ul>
+      </div>
+      <div class="setting">
+        <!-- Start Header-->
+        <div class="header">
+          <div class="search"><i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Type A Keyword"/>
+          </div>
+          <div class="img"><i class="fa-regular fa-bell"></i><img src="../image/beauty.png"/></div>
+        </div>
+        <!--end Header-->
+        
+        <div class="fill">
+          <h1 data-text="setting">setting</h1>
+        </div>
+        <div class="content">
+          <div class="section1">
+            <h2>Site Control</h2>
+            <h4>Control The Website If There Is Maintenance</h4>
+            <div class="cont"> 
+              <div class="sect"> 
+                <h3>WebSite Control</h3>
+                <h4>Open/Close Website And Type The Reason </h4>
+              </div>
+              <label>
+                <input class="toggle-checkbox" type="checkbox">
+                <div class="toggle-switch"> </div>
+              </label>
+            </div>
+            <textarea placeholder="close Message Content"> </textarea>
+          </div>
+          <div class="section2">
+            <h2>General Info</h2>
+            <h4>General Information About Your Account </h4>
+            <div class="cont">
+              <form action="">
+                <label for="fname">First Name </label>
+                <input type="text" id="fname" placeholder="First Name">
+                <label for="lname">Last Name </label>
+                <input type="text" id="lname" placeholder="Last Name">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="saraadel225@gmail.com" disabled><a>Change</a>
+              </form>
+            </div>
+          </div>
+          <div class="section3">
+            <h2>Security info </h2>
+            <h4>Security Information About Your Account</h4>
+            <div class="cont">
+              <div class="sect"> 
+                <h3>Password</h3>
+                <h4>last Change On 25/10/2021</h4>
+              </div><a href="">Change</a>
+            </div>
+            <div class="cont">
+              <div class="sect"> 
+                <h3>Two-Factor Authentication</h3>
+                <h4>Enable/Disable The Feature</h4>
+              </div>
+              <label>
+                <input class="toggle-checkbox" type="checkbox">
+                <div class="toggle-switch"> </div>
+              </label>
+            </div>
+            <div class="cont">
+              <div class="sect"> 
+                <h3>Devices</h3>
+                <h4>check The Login Devices List</h4>
+              </div><a class="devices" href=""> Devices</a>
+            </div>
+          </div>
+          <div class="section4">
+            <h2>Social Info</h2>
+            <h4>Social Media Information</h4>
+            <div class="cont">
+              <input type="text" placeholder="Twitter Username"><i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="cont">
+              <input type="text" placeholder="Facebook Username"><i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="cont">
+              <input type="text" placeholder="Linkedin  Username"><i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="cont">
+              <input type="text" placeholder="Youtube Username"><i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+          <div class="section5">
+            <h2>Widgets Control</h2>
+            <h4>Show/Hide Widgets</h4>
+            <div class="cont">
+              <label for="Checkbox1">Quick Draft 
+                <input type="checkbox" id="Checkbox1">
+                <div class="checked"></div>
+              </label><br>
+              <label for="Checkbox2">Targets
+                <input type="checkbox" id="Checkbox2">
+                <div class="checked"></div>
+              </label><br>
+              <label for="Checkbox3">Tickets Statistics 
+                <input type="checkbox" id="Checkbox3">
+                <div class="checked"></div>
+              </label><br>
+              <label for="Checkbox4">Latest Tasks 
+                <input type="checkbox" id="Checkbox4">
+                <div class="checked"></div>
+              </label><br>
+              <label for="Checkbox5">Latest News 
+                <input type="checkbox" id="Checkbox5">
+                <div class="checked"></div>
+              </label><br>
+              <label for="Checkbox6">Top Search Items 
+                <input type="checkbox" id="Checkbox6">
+                <div class="checked"></div>
+              </label><br>
+            </div>
+          </div>
+          <div class="section6">
+            <h2>Backup Manager</h2>
+            <h4>Control Backup Time And Location</h4>
+            <div class="cont">
+              <input type="radio" id="radio1" name="radio">
+              <label for="radio1">Quick Draft </label><br><br>
+              <input type="radio" id="radio2" name="radio">
+              <label for="radio2">Weekly</label><br><br>
+              <input type="radio" id="radio3" name="radio">
+              <label for="radio3">Monthly</label><br><br>
+            </div>
+            <div class="server">
+              <input type="radio" id="server-one" name="server">
+              <div class="contServer">
+                <label for="server-one"><i class="fa-solid fa-server"></i>Megaman</label>
+              </div>
+              <input type="radio" id="server-two" name="server">
+              <div class="contServer">
+                <label for="server-two"><i class="fa-solid fa-server"></i>Zero</label>
+              </div>
+              <input type="radio" id="server-three" name="server">
+              <div class="contServer">
+                <label for="server-three"><i class="fa-solid fa-server"></i>Sigma</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>         
+    <script src="../main.js"></script>
+  </body>
+</html>

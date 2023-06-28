@@ -1,0 +1,26 @@
+-var name  = "plan"
+include include.pug
+
+doctype
+html(lang="en")
+    +head
+    body
+        .scroll
+        .page
+            +list
+            div(class= name)
+                // Start Header
+                +header
+                //end Header
+                |
+                |
+                .fill
+                    h1(data-text= name)= name
+                .content
+                    +contentPlan("Free","0.00","green",3,["Access All Text Lessons","Access All Videos Lessons","Appear On Leaderboard","Browse Content Without Ads","Access All Assignments","Get Daily Prizes","Earn Certificate","1 GB Space For Hosting Files","Access Badge System"])
+                    +contentPlan("Basic","7.99","blue",7,["Access All Text Lessons","Access All Videos Lessons","Appear On Leaderboard","Browse Content Without Ads","Access All Assignments","Get Daily Prizes","Earn Certificate","1 GB Space For Hosting Files","Access Badge System"])
+                    +contentPlan("Premium","19.99","yellow",9,["Access All Text Lessons","Access All Videos Lessons","Appear On Leaderboard","Browse Content Without Ads","Access All Assignments","Get Daily Prizes","Earn Certificate","1 GB Space For Hosting Files","Access Badge System"],"No","This Is Your Current Plan")
+
+            |          
+            |
+            <script src="../main.js"></script>
